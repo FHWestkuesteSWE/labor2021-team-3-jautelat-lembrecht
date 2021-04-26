@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     char ans[1024];
     char wahl;
     do {
-        std::cout << "Gebauedeleitsystem FHW 3000\n";
+        std::cout << "Gebauedeleitsystem FHW 3000 - Jautelat/Lembrecht\n";
         cout << "Was wollen Sie tun: " << endl;
         cout << "----------------------------------------------------" << endl;
         cout << "Aktuelle Raumtemperatur ueberpruefen \t(t)" << endl;
