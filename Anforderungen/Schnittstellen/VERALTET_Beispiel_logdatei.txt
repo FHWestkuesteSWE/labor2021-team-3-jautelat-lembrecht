@@ -1,0 +1,3 @@
+[12.04.2021 10:31:51] Serveranfrage: Zugang: Öffnung Raum H03 von Chip ID 476567857348
+[12.04.2021 15:31:01] Serveranfrage: Temperaturänderung Raum H03 auf 20°C
+[12.04.2021 15:32:34] Serverabfrage: Soll-Temperatur Raum H03 ist 18°C
