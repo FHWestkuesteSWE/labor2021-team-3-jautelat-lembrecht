@@ -15,7 +15,7 @@ void BasicClient::sendRequest(const char request[], char answer[]) {
 	tcp::socket s(io_service);
 	boost::asio::connect(s, iterator);
 
-	size_t request_length = strlen(request)+1;
+	size_t request_length = strlen(request) + 1;
 	boost::asio::write(s, boost::asio::buffer(request, request_length));
 
 	size_t reply_length = boost::asio::read(s,

@@ -20,7 +20,7 @@ void BasicServer::session(socket_ptr sock)
 				break; // Connection closed cleanly by peer.
 			else if (error)
 				throw boost::system::system_error(error); // Some other error.
-			this->processRequest(request,answer);
+			this->processRequest(request, answer);
 			boost::asio::write(*sock, boost::asio::buffer(boost::asio::buffer(answer), max_length));
 		}
 	}
@@ -52,7 +52,7 @@ void BasicServer::start(char port[]) {
 Simple Server: just replies by echoing
 */
 void BasicServer::processRequest(char req[], char ans[]) {
-	strncpy(ans, req, std::min<int>(max_length,strlen(ans)+1));
+	strncpy(ans, req, std::min<int>(max_length, strlen(ans) + 1));
 }
 
 BasicServer::~BasicServer()
