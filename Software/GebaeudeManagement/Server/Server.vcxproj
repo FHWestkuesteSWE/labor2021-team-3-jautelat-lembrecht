@@ -104,10 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\boost_1_76_0;D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\boost_1_76_0\stage\x64\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\boost_1_76_0;D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\boost_1_76_0\stage\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -147,21 +149,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Heizung.cpp" />
     <ClCompile Include="Servermain.cpp" />
     <ClCompile Include="BasicServer.cpp" />
-    <ClCompile Include="QuelleServer.cpp" />
-    <ClCompile Include="Temperatursensor.cpp" />
-    <ClCompile Include="Window.cpp" />
-    <ClCompile Include="Zugang.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Heizung.h" />
-    <ClInclude Include="Raum.h" />
     <ClInclude Include="BasicServer.h" />
-    <ClInclude Include="Temperatursensor.h" />
-    <ClInclude Include="Window.h" />
-    <ClInclude Include="Zugang.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

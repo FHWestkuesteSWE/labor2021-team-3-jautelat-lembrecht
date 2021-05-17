@@ -1,2 +1,1 @@
-﻿QuelleClient.obj : error LNK2005: main ist bereits in Clientmain.obj definiert.
-LINK : fatal error LNK1104: Datei "libboost_date_time-vc142-mt-gd-x64-1_76.lib" kann nicht geöffnet werden.
+﻿  Client.vcxproj -> D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeManagement\x64\Debug\Client.exe

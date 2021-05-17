@@ -1,7 +1,6 @@
-#pragma once
 #include "BasicServer.h"
 #include <string>
-#include "Zugang.cpp"
+//#include "Zugang.h"
 
 using namespace std;
 

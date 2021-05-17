@@ -104,11 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>"C:\boost\boost_1_76_0"; "C:\boost\boost_1_76_0\stage\x64\lib"</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\boost_1_76_0;D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\boost_1_76_0\stage\x64\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\boost_1_76_0;D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\boost_1_76_0\stage\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -150,7 +151,6 @@
   <ItemGroup>
     <ClCompile Include="BasicClient.cpp" />
     <ClCompile Include="Clientmain.cpp" />
-    <ClCompile Include="QuelleClient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicClient.h" />
