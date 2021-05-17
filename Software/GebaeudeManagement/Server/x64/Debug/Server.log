@@ -1,0 +1,56 @@
+﻿  Heizung.cpp
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Heizung.h(20,9): error C3646: "heizung_bez": Unbekannter Überschreibungsspezifizierer
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Heizung.h(20,20): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
+  Servermain.cpp
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\packages\boost.1.76.0.0\lib\native\include\boost\bind.hpp(41): message : The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(20,9): error C3646: "zugang_bez": Unbekannter Überschreibungsspezifizierer
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(20,19): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(21,12): error C2061: Syntaxfehler: Bezeichner "string"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(22,14): error C2061: Syntaxfehler: Bezeichner "string"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(23,18): error C2061: Syntaxfehler: Bezeichner "string"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.cpp(18,38): error C2511: "bool Zugang::lock(std::string)": Überladene Memberfunktion nicht in "Zugang" gefunden
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(17): message : Siehe Deklaration von "Zugang"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.cpp(22,40): error C2511: "bool Zugang::unlock(std::string)": Überladene Memberfunktion nicht in "Zugang" gefunden
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(17): message : Siehe Deklaration von "Zugang"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.cpp(25,44): error C2511: "bool Zugang::getZustand(std::string)": Überladene Memberfunktion nicht in "Zugang" gefunden
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(17): message : Siehe Deklaration von "Zugang"
+  BasicServer.cpp
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\packages\boost.1.76.0.0\lib\native\include\boost\bind.hpp(41): message : The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\BasicServer.cpp(55,61): warning C4267: "Argument": Konvertierung von "size_t" nach "const _Ty", Datenverlust möglich
+          with
+          [
+              _Ty=int
+          ]
+  QuelleServer.cpp
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\packages\boost.1.76.0.0\lib\native\include\boost\bind.hpp(41): message : The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+  Temperatursensor.cpp
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Temperatursensor.h(19,9): error C3646: "temp_bez": Unbekannter Überschreibungsspezifizierer
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Temperatursensor.h(19,17): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
+  Window.cpp
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Window.h(19,9): error C3646: "window_bez": Unbekannter Überschreibungsspezifizierer
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Window.h(19,19): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
+  Zugang.cpp
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(20,9): error C3646: "zugang_bez": Unbekannter Überschreibungsspezifizierer
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(20,19): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(21,12): error C2061: Syntaxfehler: Bezeichner "string"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(22,14): error C2061: Syntaxfehler: Bezeichner "string"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(23,18): error C2061: Syntaxfehler: Bezeichner "string"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.cpp(18,38): error C2511: "bool Zugang::lock(std::string)": Überladene Memberfunktion nicht in "Zugang" gefunden
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(17): message : Siehe Deklaration von "Zugang"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.cpp(22,40): error C2511: "bool Zugang::unlock(std::string)": Überladene Memberfunktion nicht in "Zugang" gefunden
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(17): message : Siehe Deklaration von "Zugang"
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.cpp(25,44): error C2511: "bool Zugang::getZustand(std::string)": Überladene Memberfunktion nicht in "Zugang" gefunden
+C:\Users\ylemb\source\repos\labor2021-team-3-jautelat-lembrecht\Software\GebaeudeManagement\Server\Zugang.h(17): message : Siehe Deklaration von "Zugang"
+  Code wird generiert...

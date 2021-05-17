@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\boost\boost_1_76_0; C:\boost\boost_1_76_0\stage\x64\lib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>"C:\boost\boost_1_76_0"; "C:\boost\boost_1_76_0\stage\x64\lib"</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,7 +149,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BasicClient.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Clientmain.cpp" />
     <ClCompile Include="QuelleClient.cpp" />
   </ItemGroup>
   <ItemGroup>

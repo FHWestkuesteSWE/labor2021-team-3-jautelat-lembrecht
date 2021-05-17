@@ -148,7 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Heizung.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Servermain.cpp" />
     <ClCompile Include="BasicServer.cpp" />
     <ClCompile Include="QuelleServer.cpp" />
     <ClCompile Include="Temperatursensor.cpp" />
