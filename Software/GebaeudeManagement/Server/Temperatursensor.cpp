@@ -13,5 +13,6 @@
 #include "Temperatursensor.h"
 
 float Temperatursensor::getTemp(int temp_bez) {
+	return float(rand());
 }
 

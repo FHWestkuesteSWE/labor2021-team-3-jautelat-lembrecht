@@ -8,7 +8,7 @@
 //  @ Author : 
 //
 //
-
+#include <string>
 
 #if !defined(_ZUGANG_H)
 #define _ZUGANG_H
@@ -17,10 +17,10 @@
 class Zugang {
 public:
 	bool zustand;
-	string zugang_bez;
-	bool lock(string zugang_bez);
-	bool unlock(string zugang_bez);
-	bool getZustand(string zugang_bez);
+	std::string zugang_bez;
+	bool lock(std::string zugang_bez);
+	bool unlock(std::string zugang_bez);
+	bool getZustand(std::string zugang_bez);
 };
 
 #endif  //_ZUGANG_H

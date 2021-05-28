@@ -10,6 +10,8 @@
 //
 
 
+#include <string>
+
 #if !defined(_HEIZUNG_H)
 #define _HEIZUNG_H
 
@@ -17,7 +19,7 @@
 class Heizung {
 public:
 	float sollwert;
-	string heizung_bez;
+	std::string heizung_bez;
 	void setTemp(int heizung_bez, int sollwert);
 };
 

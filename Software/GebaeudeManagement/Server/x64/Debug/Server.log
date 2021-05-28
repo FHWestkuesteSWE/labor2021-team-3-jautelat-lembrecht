@@ -10,10 +10,6 @@ D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeMana
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeManagement\Server\BasicServer.cpp(55,61): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
+  Zugang.cpp
   Generating Code...
   Server.vcxproj -> D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeManagement\x64\Debug\Server.exe

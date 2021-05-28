@@ -10,13 +10,15 @@
 //
 
 
+#include <string>
+
 #if !defined(_TEMPERATURSENSOR_H)
 #define _TEMPERATURSENSOR_H
 
 
 class Temperatursensor {
 public:
-	string temp_bez;
+	std::string temp_bez;
 	float temp;
 	float getTemp(int temp_bez);
 };

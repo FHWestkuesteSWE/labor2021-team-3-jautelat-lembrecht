@@ -151,9 +151,11 @@
   <ItemGroup>
     <ClCompile Include="Servermain.cpp" />
     <ClCompile Include="BasicServer.cpp" />
+    <ClCompile Include="Zugang.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicServer.h" />
+    <ClInclude Include="Zugang.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

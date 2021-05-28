@@ -10,13 +10,15 @@
 //
 
 
+#include <string>
+
 #if !defined(_WINDOW_H)
 #define _WINDOW_H
 
 
 class Window {
 public:
-	string window_bez;
+	std::string window_bez;
 	int zustand;
 	void setWindow(int window_bez, int zustand);
 	int getWindow(int window_bez);

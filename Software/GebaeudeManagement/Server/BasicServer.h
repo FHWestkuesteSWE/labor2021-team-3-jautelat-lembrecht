@@ -18,5 +18,6 @@ public:
 private:
 	void session(socket_ptr sock);
 	virtual void processRequest(char request[], char answer[]);
+	std::string getSubString(std::string const &s);
 };
 

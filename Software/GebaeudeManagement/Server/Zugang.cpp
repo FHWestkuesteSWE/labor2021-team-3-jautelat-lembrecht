@@ -13,15 +13,18 @@
 #include "Zugang.h"
 #include <string>
 
-using namespace std;
-
-bool Zugang::lock(string zugang_bez) {
-	
+bool Zugang::lock(std::string zugang_bez) {
+	zustand = true;
+	//Fehlerprüfung immer true
+	return true;
 }
 
-bool Zugang::unlock(string zugang_bez) {
+bool Zugang::unlock(std::string zugang_bez) {
+	zustand = false;
+	return true;
 }
 
-bool Zugang::getZustand(string zugang_bez) {
+bool Zugang::getZustand(std::string zugang_bez) {
+	return zustand;
 }
 

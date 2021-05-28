@@ -48,11 +48,30 @@ void BasicServer::start(char port[]) {
 	}
 }
 
-/*
-Simple Server: just replies by echoing
-*/
 void BasicServer::processRequest(char req[], char ans[]) {
-	strncpy(ans, req, std::min<int>(max_length, strlen(ans) + 1));
+	//strncpy(ans, req, std::min<int>(max_length, strlen(ans) + 1));
+	std::string command = getSubString(req);
+	std::string answer = "No answer defined.";
+	if (command == "state") {
+		answer = "Der Zugang hat den Status:";
+	}
+	else {
+		answer = "Unknown command!";
+	}
+	strcpy(ans, answer.c_str());
+}
+
+std::string BasicServer::getSubString(std::string const &s)
+{
+	std::string::size_type pos = s.find(' ');
+	if (pos != std::string::npos)
+	{
+		return s.substr(0, pos);
+	}
+	else
+	{
+		return s;
+	}
 }
 
 BasicServer::~BasicServer()

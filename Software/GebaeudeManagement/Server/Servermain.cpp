@@ -1,10 +1,9 @@
 #include "BasicServer.h"
-#include <string>
-//#include "Zugang.h"
+#include "Zugang.h"
 
-using namespace std;
 
 int main(int argc, char* argv[]) {
+	Zugang Tuer0001;
 	char port[] = "5000";
 	BasicServer s;
 //	s.start(argv[1]);
