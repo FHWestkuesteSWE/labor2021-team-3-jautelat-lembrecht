@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
         {
             request = "temp " + raumabfrage();
             strcpy_s(req, request.c_str());
-            c.sendRequest(req, ans);
+             c.sendRequest(req, ans);
             cout << ans;
             break;
         }
