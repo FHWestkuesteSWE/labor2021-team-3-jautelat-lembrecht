@@ -149,12 +149,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Heizung.cpp" />
+    <ClCompile Include="Location.cpp" />
+    <ClCompile Include="LocationServer.cpp" />
+    <ClCompile Include="Raum.cpp" />
     <ClCompile Include="Servermain.cpp" />
     <ClCompile Include="BasicServer.cpp" />
+    <ClCompile Include="Temperatursensor.cpp" />
+    <ClCompile Include="Window.cpp" />
     <ClCompile Include="Zugang.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicServer.h" />
+    <ClInclude Include="Heizung.h" />
+    <ClInclude Include="Location.h" />
+    <ClInclude Include="LocationServer.h" />
+    <ClInclude Include="Raum.h" />
+    <ClInclude Include="Temperatursensor.h" />
+    <ClInclude Include="Window.h" />
     <ClInclude Include="Zugang.h" />
   </ItemGroup>
   <ItemGroup>

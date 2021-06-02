@@ -1,4 +1,13 @@
-﻿  Servermain.cpp
+﻿  Heizung.cpp
+  Location.cpp
+  LocationServer.cpp
+D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeManagement\packages\boost.1.76.0.0\lib\native\include\boost\bind.hpp(41): message : The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+  Raum.cpp
+  Servermain.cpp
 D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeManagement\packages\boost.1.76.0.0\lib\native\include\boost\bind.hpp(41): message : The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
   Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
@@ -10,6 +19,14 @@ D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeMana
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeManagement\Server\BasicServer.cpp(57,61): warning C4267: 'argument': conversion from 'size_t' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  Temperatursensor.cpp
+D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeManagement\Server\Temperatursensor.cpp(7,21): warning C4305: '=': truncation from 'double' to 'float'
+  Window.cpp
   Zugang.cpp
   Generating Code...
   Server.vcxproj -> D:\VisualStudio\MeineProjekte\repo\FHWestkuesteSWE\Gruppe3\Software\GebaeudeManagement\x64\Debug\Server.exe
