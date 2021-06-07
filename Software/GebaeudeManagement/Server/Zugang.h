@@ -9,11 +9,11 @@
 
 class Zugang {
 public:
+	bool lock();
+	bool unlock();
+	bool getZustand();
+private:
 	bool zustand;
-	std::string zugang_bez;
-	bool lock(std::string zugang_bez);
-	bool unlock(std::string zugang_bez);
-	bool getZustand(std::string zugang_bez);
 };
 
 #endif  // ZUGANG_H

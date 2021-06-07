@@ -55,17 +55,6 @@ void BasicServer::start(char port[]) {
 
 void BasicServer::processRequest(char req[], char ans[]) {
 	strncpy(ans, req, std::min<int>(max_length, strlen(ans) + 1));
-	/*
-	std::string command = getSubString(req);
-	std::string answer = "No answer defined.";
-	if (command == "state") {
-		answer = "Der Zugang hat den Status:";
-	}
-	else {
-		answer = "Unknown command!";
-	}
-	strcpy(ans, answer.c_str());
-	*/
 }
 
 BasicServer::~BasicServer()

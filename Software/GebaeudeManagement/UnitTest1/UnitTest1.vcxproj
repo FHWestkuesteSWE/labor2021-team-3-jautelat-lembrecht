@@ -159,6 +159,8 @@
     <ClCompile Include="..\Client\BasicClient.cpp" />
     <ClCompile Include="..\Server\BasicServer.cpp" />
     <ClCompile Include="..\Server\Heizung.cpp" />
+    <ClCompile Include="..\Server\Location.cpp" />
+    <ClCompile Include="..\Server\LocationServer.cpp" />
     <ClCompile Include="..\Server\Raum.cpp" />
     <ClCompile Include="..\Server\Temperatursensor.cpp" />
     <ClCompile Include="..\Server\Window.cpp" />
@@ -175,6 +177,8 @@
     <ClInclude Include="..\Client\BasicClient.h" />
     <ClInclude Include="..\Server\BasicServer.h" />
     <ClInclude Include="..\Server\Heizung.h" />
+    <ClInclude Include="..\Server\Location.h" />
+    <ClInclude Include="..\Server\LocationServer.h" />
     <ClInclude Include="..\Server\Raum.h" />
     <ClInclude Include="..\Server\Temperatursensor.h" />
     <ClInclude Include="..\Server\Window.h" />

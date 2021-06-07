@@ -2,6 +2,7 @@
 #include "CppUnitTest.h"
 #include "Client/BasicClient.h"
 #include "Server/BasicServer.h"
+#include "Server/LocationServer.h"
 #include <iostream>
 #include <windows.h>
 #include <shellapi.h>
@@ -61,14 +62,11 @@ namespace UnitTest1
 
 		TEST_METHOD(T3_ServerClientAbfrage)
 		{
-			//Starte Server
-			char port[] = "5000";
-			/*
-			BasicServer server1;
-			server1.start(port);
-			*/
+			//Server muss extern aus T2 gestartet werden
+
 			//Starte Client
 			char server[] = "127.0.0.1";
+			char port[] = "5000";
 			BasicClient client1(server, port);
 
 			//Anfrage von Client an Server
@@ -78,5 +76,13 @@ namespace UnitTest1
 			client1.sendRequest(req, ans);
 			Assert::AreNotEqual(ans, fail_phrase);
 		}
+		/*
+		TEST_METHOD(T4_SplitCommandFunction)
+		{
+			LocationServer loc1;
+			loc
+			Assert::I;
+		}
+		*/
 	};
 }

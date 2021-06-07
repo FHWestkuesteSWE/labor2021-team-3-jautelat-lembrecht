@@ -1,23 +1,29 @@
-// main.cpp : Diese Datei enthält die Funktion "main". Hier beginnt und endet die Ausführung des Programms.
-//
+// main.cpp
+
 #pragma once
+
+//Includes
 #include <iostream>
 #include "BasicClient.h"
 
-std::string raumabfrage();
-
 using namespace std;
+
+//Functions
+string raumabfrage();
+string sendCommand(BasicClient Client1, string request);
+
+
 int main(int argc, char* argv[])
 {
+    //Client Start
     char server[] = "127.0.0.1";
     char port[] = "5000";
-  //  BasicClient c(argv[1], argv[2]);
-    BasicClient c(server, port);
-    char req[1024] = "Generic Request!";
-    char ans[1024];
+    BasicClient Client1(server, port);  //BasicClient c(argv[1], argv[2]);
+
+    //GUI
     char wahl;
     do {
-        std::cout << "Gebauedeleitsystem FHW 3000 - Jautelat/Lembrecht\n";
+        cout << "Gebauedeleitsystem FHW 3000 - Jautelat/Lembrecht\n";
         cout << "Was wollen Sie tun: " << endl;
         cout << "----------------------------------------------------" << endl;
         cout << "Aktuelle Raumtemperatur ueberpruefen \t(t)" << endl;
@@ -26,66 +32,89 @@ int main(int argc, char* argv[])
         cout << "Aussentueren oeffnen   \t\t(u)" << endl;
         cout << "Aussentueren schliessen \t\t(l)" << endl;
         cout << "..." << endl;
+        cout << "Direkte Anfragen an Server (x)" << endl;
         cout << "Beenden \t\t\t\t(e)" << endl;
         cout << "----------------------------------------------------" << endl;
         cout << "Ihre Wahl: ";
+        
+        
         cin >> wahl;
         
         string request = "";
+        string output = "";
         switch (wahl) {
         case 't':
         {
             request = "temp " + raumabfrage();
-            strcpy_s(req, request.c_str());
-             c.sendRequest(req, ans);
-            cout << ans;
+            output = sendCommand(Client1, request);
+            cout << output;
             break;
         }
         case 's':
         {
-            uint16_t soll = 20;
+            float soll = 20.0;
             cout << "Geben Sie die gewünschte Raumtemperatur an: ";
             cin >> soll;
             request = "set " + raumabfrage() + " " + to_string(soll);
-            strcpy_s(req, request.c_str());
-            c.sendRequest(req, ans);
-            cout << ans;
+            output = sendCommand(Client1, request);
+            cout << output;
             break;
         }
         case 'z':
         {
             request = "state " + raumabfrage();
-            strcpy_s(req, request.c_str());
-            c.sendRequest(req, ans);
-            cout << ans;
+            output = sendCommand(Client1, request);
+            cout << output;
             break;
         }
         case 'u':
         {
             request = "unlock " + raumabfrage();
-            strcpy_s(req, request.c_str());
-            c.sendRequest(req, ans);
-            cout << ans;
+            output = sendCommand(Client1, request);
+            cout << output;
             break;
         }
         case 'l':
         {
             request = "lock " + raumabfrage();
-            strcpy_s(req, request.c_str());
-            c.sendRequest(req, ans);
-            cout << ans;
+            output = sendCommand(Client1, request);
+            cout << output;
+            break;
+        }
+        case 'x':
+        {
+            cout << "String an Server: ";
+            //char in[1024] = "";
+            cin.ignore();
+            getline(cin, request);
+            //request = in;
+            output = sendCommand(Client1, request);
+            cout << output;
             break;
         }
         default:;
 
         }
     } while (wahl != 'e');
+
+
 }
 
-std::string raumabfrage()
+string raumabfrage()
 {
-    std::string raum = "";
+    string raum = "";
     cout << "Geben sie die Bezeichnung des Raumes ein: ";
     cin >> raum;
     return raum;
+}
+
+string sendCommand(BasicClient client, string request)
+{
+    //Add Pipe '|' as End Character
+    request = request + " |";
+    char req[1024] = "Empty Request";
+    char ans[1024] = "Empty Response";
+    strcpy_s(req, request.c_str());
+    client.sendRequest(req, ans);
+    return ans;
 }
