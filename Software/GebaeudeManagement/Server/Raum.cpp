@@ -6,12 +6,15 @@
 
 #include "Raum.h"
 
-
-
-void Raum::addTempSensor(std::string bez)
+bool Raum::setTemp(float value)
 {
-	//Raum new_room;
-	//rooms[bez] = new_room;
-	return;
+	avgtemp = value;
+	return true;
+}
+
+float Raum::getTemp()
+{
+	avgtemp = temp1.getTemp();
+	return avgtemp;
 }
 

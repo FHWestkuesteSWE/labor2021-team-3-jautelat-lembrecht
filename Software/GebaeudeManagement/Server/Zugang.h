@@ -12,6 +12,7 @@ public:
 	bool lock();
 	bool unlock();
 	bool getZustand();
+	bool setZustand(bool lock);
 private:
 	bool zustand;
 };

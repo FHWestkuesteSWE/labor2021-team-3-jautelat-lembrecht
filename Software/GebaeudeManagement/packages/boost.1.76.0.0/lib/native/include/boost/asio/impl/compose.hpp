@@ -60,7 +60,9 @@ namespace detail
     }
 
   private:
-    executor_type executor_;
+    
+      executor_type executor_;
+
   };
 
 #if !defined(BOOST_ASIO_NO_TS_EXECUTORS)

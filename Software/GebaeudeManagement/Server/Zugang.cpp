@@ -19,3 +19,8 @@ bool Zugang::getZustand() {
 	return zustand;
 }
 
+bool Zugang::setZustand(bool lock) {
+	zustand = lock;
+	return true;
+}
+

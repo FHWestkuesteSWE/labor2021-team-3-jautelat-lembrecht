@@ -3,12 +3,15 @@
 #ifndef RAUM_H
 #define RAUM_H
 
+#include "Temperatursensor.h"
 
 class Raum {
 public:
-	//std::string bezeichner;
-	float avg_temp;
-	void addTempSensor(std::string bez);
+	float avgtemp = 0.0;
+	Temperatursensor temp1;
+	bool setTemp(float value);
+	float getTemp();
+
 };
 
 #endif  // RAUM_H

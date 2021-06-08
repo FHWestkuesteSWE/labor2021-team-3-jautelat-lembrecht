@@ -149,6 +149,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileIO.cpp" />
     <ClCompile Include="Heizung.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="LocationServer.cpp" />
@@ -161,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicServer.h" />
+    <ClInclude Include="FileIO.h" />
     <ClInclude Include="Heizung.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="LocationServer.h" />

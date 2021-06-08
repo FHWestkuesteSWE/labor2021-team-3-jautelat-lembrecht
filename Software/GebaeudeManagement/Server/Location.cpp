@@ -1,6 +1,5 @@
 //Location.cpp
 
-
 #include <string>
 #include <map>
 
@@ -16,12 +15,17 @@ Location::Location()
 
 
 //Accesses
-bool Location::readAccess(std::string zugang_bez)
+bool Location::getAccess(std::string zugang_bez)
 {
 	bool zustand = accesses[zugang_bez].getZustand();
 	return zustand;
 }
 
+bool Location::setAccess(std::string zugang_bez, bool lock)
+{
+	bool success = accesses[zugang_bez].setZustand(lock);
+	return success;
+}
 
 void Location::addAccess(std::string zugang_bez)
 {
@@ -38,11 +42,23 @@ void Location::delAccess(std::string zugang_bez)
 
 
 //Rooms
+float Location::getRoomTemp(std::string raum_bez)
+{
+	float temp = rooms[raum_bez].getTemp();
+	return temp;
+}
+
+bool Location::setRoomTemp(std::string raum_bez, float temp)
+{
+	bool success = accesses[raum_bez].setZustand(temp);
+	return success;
+}
+
 void Location::addRoom(std::string raum_bez)
 {
 	Raum new_room;
-	new_room.avg_temp = 0.0;
-	rooms[raum_bez] = new_room;
+	new_room.setTemp(20.0);
+	rooms[raum_bez] = new_room;	//Overwrite possible without notice!!!
 	return;
 }
 

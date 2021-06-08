@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
+#define WARNING_NO_TYPE "Bitte geben Sie einen Typ (\"room\" oder \"access\") an!"
+
 #include "LocationServer.h"
 #include "BasicServer.h"
 #include "Location.h"
@@ -14,28 +16,32 @@
 
 void LocationServer::processRequest(char req[], char ans[])
 {
-	//strncpy(ans, req, std::min<int>(max_length, strlen(ans) + 1));
-	
-	/*
-	std::string::size_type pos = std::string::npos;
-	std::string command = getSubString(req);
-	std::string options = "";
-	*/
-
+	const std::string warning_no_type = WARNING_NO_TYPE;
 	std::vector<std::string> command = splitCommand(req);
 	std::string answer = "No answer defined.";
 	std::string cmd = command[0];
-	if (cmd == "state") {
-		bool zustand = location.readAccess(command[1]);
-		if (zustand)
+	if (cmd == "get") {
+		if (command[1] == "access")
 		{
-			answer = "Der Zugang ist VERSCHLOSSEN";
+			bool zustand = location.getAccess(command[1]);
+			if (zustand)
+			{
+				answer = "Der Zugang ist VERSCHLOSSEN";
+			}
+			else
+			{
+				answer = "Der Zugang ist offen";
+			}
+		}
+		else if (command[1] == "room")
+		{
+			float temp = location.getRoomTemp(command[2]);
+			answer = "Die Raumtemperatur beträgt: " + std::to_string(temp) + " C.";
 		}
 		else
 		{
-			answer = "Der Zugang ist offen";
+			answer = warning_no_type;
 		}
-
 	}
 	else if (cmd == "add") {
 		if (command[1] == "access")
@@ -50,7 +56,41 @@ void LocationServer::processRequest(char req[], char ans[])
 		}
 		else 
 		{
-			answer = "Bitte geben Sie einen Typ (\"room\" oder \"access\") an!";
+			answer = warning_no_type;
+		}
+	}
+	else if (cmd == "set") {
+		if (command[1] == "access")
+		{
+			bool zustand = detectTrueString(command[2]);
+			location.setAccess(command[2], zustand);
+			answer = "Der Zugang " + command[2] + " wurde auf " + std::to_string(zustand) + " gesetzt.";
+		}
+		else if (command[1] == "room")
+		{
+			float temp = 19.0;//float(command[3]);
+			location.setRoomTemp(command[2], temp);
+			answer = "Die Soll-Temperatur im Raum wurde auf " + std::to_string(temp) + " C gesetzt.";
+		}
+		else
+		{
+			answer = warning_no_type;
+		}
+	}
+	else if (cmd == "del") {
+		if (command[1] == "access")
+		{
+			location.delAccess(command[2]);
+			answer = "Der Zugang " + command[2] + " wurde gelöscht.";
+		}
+		else if (command[1] == "room")
+		{
+			location.delRoom(command[2]);
+			answer = "Der Raum " + command[2] + " wurde gelöscht.";
+		}
+		else
+		{
+			answer = warning_no_type;
 		}
 	}
 	else {
@@ -87,6 +127,18 @@ std::string LocationServer::getSubString(std::string const &s)
 	else
 	{
 		return s;
+	}
+}
+
+bool LocationServer::detectTrueString(std::string str)
+{
+	if (str == "true" || str == "True" || str == "TRUE" || str == "1")
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }
 

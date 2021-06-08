@@ -7,7 +7,7 @@ class Temperatursensor {
 public:
 	//std::string temp_bez;
 	float temp;
-	float getTemp(int temp_bez);
+	float getTemp();
 };
 
 #endif  // TEMPERATURSENSOR_H

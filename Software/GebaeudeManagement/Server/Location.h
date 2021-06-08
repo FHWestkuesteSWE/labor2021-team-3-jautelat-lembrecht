@@ -15,10 +15,13 @@ public:
 	
 	Location();
 
-	bool readAccess(std::string raum_bez);
+	bool getAccess(std::string zugang_bez);
+	bool setAccess(std::string zugang_bez, bool lock);
 	void addAccess(std::string zugang_bez);
 	void delAccess(std::string zugang_bez);
 
+	float getRoomTemp(std::string raum_bez);
+	bool setRoomTemp(std::string raum_bez, float temp);
 	void addRoom(std::string raum_bez);
 	void delRoom(std::string raum_bez);
 

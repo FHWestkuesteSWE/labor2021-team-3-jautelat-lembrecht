@@ -17,6 +17,7 @@ private:
 	virtual void processRequest(char request[], char answer[]);
 	std::vector<std::string> splitCommand(char req[]);
 	std::string getSubString(std::string const& s);
+	bool detectTrueString(std::string zustands_string);
 	void saveLocation(Location loc);
 	Location openLocation(std::string path);
 };
